@@ -13,7 +13,7 @@
     "react-router-dom": "^4.3.1",
     "node-sass": "^4.11.0",
     "reactstrap": "6.4.0",
-    "bootstrap": "4.1.1",
+    "bootstrap": "^4.3.1",
     "chart.js": "^2.7.3",
     "classnames": "^2.2.6",
     "react-chartjs-2": "2.6.4",
