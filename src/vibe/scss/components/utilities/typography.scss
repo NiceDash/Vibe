@@ -1,0 +1,27 @@
+/* TYPOGRAPHY UTILITY STYLES
+   ----------------------------- */
+
+.truncate {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.line-through {
+	text-decoration: line-through;
+}
+.bold {
+  font-weight: bold;
+}
+.all-caps {
+  text-transform: uppercase;
+}
+.hint-text {
+    opacity: .7;
+}
+.text-ellipsis {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

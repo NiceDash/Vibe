@@ -1,0 +1,69 @@
+/* SLIDER STYLES
+   ----------------------------- */
+
+// NoUI
+$noUiBgColor:      $colorPrimary;
+$noUiBgEmptyColor: #eee;
+
+.noUi-handle {
+    border-radius: 999px;
+    box-shadow: none;
+
+    &:before {
+		content: none;
+    }
+
+    &:after {
+		content: none;
+    }
+}
+
+.noUi-horizontal {
+
+	.noUi-handle {
+		width: 20px;
+	    height: 20px;
+	    left: -15px;
+	    border: 1px solid #dbdbdb;
+	    top: -7px;
+	    transition: all 0.2s ease;
+
+	    &:hover {
+    	    border: 1px solid #c0c0c0;
+	    }
+
+	    &:active {
+	    	transform: scale(1.1);
+	    }
+	}
+}
+
+.noUi-origin {
+    border-radius: 0px;
+    bottom: 5px;
+}
+
+.noUi-base {
+    background: $noUiBgEmptyColor;
+    border-radius: 10px;
+}
+
+.noUi-horizontal {
+    height: 4px;
+}
+
+.noUi-connect {
+    background: $noUiBgColor;
+    border-radius: 10px;
+    box-shadow: none;
+    transition: background 450ms;
+}
+
+.noUi-tooltip {
+    border: 0;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.65);
+    color: #fff;
+    padding: 5px 8px;
+    font-size: 13px;
+}

@@ -1,0 +1,175 @@
+/* TOP NAVIGATION STYLES
+   ----------------------------- */
+
+.app-header {
+  height: 50px;
+  background: white;
+  display: flex;
+  position: relative;
+  z-index: 80;
+  width: 100%;
+
+  .top-nav {
+    padding: 0 0px;
+    width: 100%;
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.03), 0 1px 8px rgba(0, 21, 41, 0.12);
+
+    > nav {
+      padding: 5px 10px;
+      > li {
+        > a {
+          background: transparent !important;
+          color: #909090;
+          padding: 15px 12px;
+
+          i {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  .page-heading {
+    font-size: 1.3rem;
+  }
+
+  .navbar-right {
+    margin-right: 0;
+    float: none;
+  }
+
+  i {
+    position: relative;
+  }
+
+  .sidebar-toggle {
+    .fa {
+      transform: rotate(0deg);
+    }
+    &.is-collapsed {
+      .fa {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.dropdown-notification {
+  min-width: 250px;
+  padding: 0;
+
+  .notification-menu-header {
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .notifications-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .notification-link {
+    padding: 10px 15px;
+  }
+
+  .notification-menu-footer {
+    padding: 0;
+    border-top: 1px solid #eee;
+
+    a {
+      text-align: center;
+      padding: 15px 15px;
+
+      &:hover,
+      &:active {
+        background-color: transparentize($colorPrimary, 0.95) !important;
+      }
+    }
+  }
+}
+
+.mobile-menu-link {
+  display: none;
+  color: white;
+  font-size: 24px;
+  line-height: 50px;
+  padding: 0 20px;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: white;
+    opacity: 0.8;
+  }
+}
+
+.navbar-light {
+  .navbar-toggler {
+    border-color: transparent;
+  }
+}
+
+//fixed top nav
+.fixed-top-nav {
+  .app-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  #page-content {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (min-width: $breakPointSm) {
+  .app-header {
+    .site-logo-bar {
+      position: fixed;
+    }
+  }
+}
+
+@media screen and (max-width: $breakPointSm) {
+  .app-header {
+    display: block;
+    height: inherit;
+    position: fixed;
+    top: 0;
+
+    .site-logo-bar {
+      width: 100%;
+      display: none;
+
+      .navbar-brand {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    .sidebar-toggle {
+      i {
+        transform: rotate(180deg);
+      }
+      &.is-collapsed {
+        i {
+          transform: rotate(0deg);
+        }
+      }
+    }
+  }
+  .mobile-menu-link {
+    display: block;
+    position: absolute;
+    left: 0;
+  }
+}
+
+// Dropdowns
+
+@media screen and (max-width: $breakPointXs) {
+  .navbar-nav {
+    padding-top: 20px;
+  }
+}

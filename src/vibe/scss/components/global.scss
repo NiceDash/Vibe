@@ -1,0 +1,14 @@
+/* GLOBAL STYLES
+   ----------------------------- */
+
+body {
+	background-color: $globalBackgroundColor;
+	font-family: $globalFontFamily;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+hr {
+	border-color: $hrColor;
+}

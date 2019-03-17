@@ -1,0 +1,329 @@
+.app-sidebar {
+  position: fixed;
+  z-index: 999;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  width: $sidebarWidth;
+  background: $sidenavBgColor;
+
+  &.has-alert {
+    top: 48px;
+  }
+
+  > nav {
+    flex: 1 1;
+    height: 100%;
+
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+      width: 0px;
+    }
+  }
+}
+
+.site-logo-bar {
+  overflow: hidden;
+  background: $sidenavBgColor;
+
+  .navbar-brand {
+    width: 100%;
+    padding: 0 20px;
+    line-height: 48px;
+    color: white;
+    font-weight: bold;
+    margin-right: 0;
+
+    &:focus {
+      outline: none;
+      box-shadow: inset 0px 0px 0px 2px $activeNavBorderColor !important;
+    }
+
+    > img {
+      max-height: 30px;
+      max-width: 30px;
+      display: inline-block;
+    }
+
+    .logo-text {
+      margin-left: 8px;
+      opacity: 1;
+      vertical-align: middle;
+
+      img {
+        max-height: 40px;
+        max-width: 50px;
+      }
+    }
+  }
+}
+
+// Collaped Side Menu
+@media screen and (min-width: $breakPointSm) {
+  .side-menu-collapsed {
+    .site-logo-bar {
+      .navbar-brand {
+        padding: 0 10px;
+
+        .logo-text {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+#main-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .nav-item {
+    position: relative;
+
+    &.active {
+      > a {
+        border-color: $activeNavBorderColor;
+      }
+    }
+
+    &.has-submenu {
+      ul {
+        list-style: none;
+        padding: 0;
+        height: 0;
+        overflow: hidden;
+        background: darken($sidenavBgHover, 4%);
+
+        .nav-item {
+          background: darken($sidenavBgHover, 4%);
+
+          &:focus,
+          &:hover {
+            a {
+              background: darken($sidenavBgHover, 6%);
+            }
+          }
+
+          a {
+            padding-left: 45px;
+
+            &.active {
+              background: darken($sidenavBgHover, 6%);
+            }
+
+            &:focus {
+              outline: none;
+              box-shadow: inset 0px 0px 0px 2px $activeNavBorderColor;
+            }
+          }
+        }
+      }
+
+      &.open {
+        ul {
+          height: auto;
+        }
+      }
+    }
+
+    &.submenu.open {
+      .menu-expand-icon {
+        transform: rotate(90deg);
+      }
+    }
+
+    > a {
+      display: flex;
+      width: 100%;
+      text-decoration: none;
+      padding: 14px 20px;
+      color: $sideNavTextColor;
+      border-color: transparent;
+
+      &.active,
+      &:hover {
+        background: $sidenavBgHover;
+        color: #fff;
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: inset 0px 0px 0px 2px $activeNavBorderColor !important;
+      }
+
+      &.active {
+        box-shadow: inset 2px 0px $activeNavBorderColor;
+      }
+    }
+
+    .nav-item-label {
+      opacity: 1;
+      vertical-align: middle;
+    }
+
+    .badge {
+      opacity: 1;
+      vertical-align: middle;
+      margin-left: auto;
+    }
+
+    &.nav-item-spacer {
+      flex: 1;
+    }
+
+    .side-nav-icon {
+      margin-right: 10px;
+      vertical-align: middle;
+      position: relative;
+      top: 0px;
+      left: 0px;
+      width: 1.25em;
+    }
+  }
+
+  li.separator {
+    border-top: 1px solid $sideNavSeparatorColor;
+    margin: 10px 20px;
+  }
+
+  .menu-expand-icon {
+    margin-right: 0;
+    line-height: 20px;
+    font-size: 11px;
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    transform: rotate(0deg);
+  }
+
+  .badge {
+    background: $activeNavBorderColor;
+  }
+}
+
+// Collapsed Styles
+@media screen and (min-width: $breakPointSm) {
+  .app:not(.side-menu-collapsed) {
+    .app-sidebar {
+      > nav {
+        flex: 1 1;
+        overflow-y: auto;
+        height: 100%;
+      }
+    }
+  }
+  .side-menu-collapsed {
+    .app-sidebar {
+      width: 50px;
+
+      .site-logo {
+        padding: 5px;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    ul#main-menu {
+      li.nav-item {
+        position: relative;
+        width: 50px;
+
+        a {
+          padding: 10px 12px;
+          text-align: center;
+
+          i {
+            padding-right: 0px;
+            left: 3px;
+          }
+          .side-nav-icon {
+            // font-size: 18px;
+            margin-right: 0px;
+            margin-left: 3px;
+          }
+          .nav-item-label,
+          .badge,
+          .menu-expand-icon {
+            display: none;
+          }
+        }
+
+        &.has-submenu {
+          > .nav-submenu {
+            margin-left: -20px;
+            height: auto;
+            display: none;
+            z-index: 999;
+
+            li.nav-item {
+              width: 240px;
+
+              .nav-item-label {
+                opacity: 1;
+                display: block;
+              }
+
+              .side-nav-icon {
+                display: none;
+              }
+
+              a {
+                padding-left: 20px;
+                border-color: transparent;
+                text-align: left;
+              }
+            }
+          }
+
+          &:focus,
+          &:hover {
+            .nav-submenu {
+              position: absolute;
+              top: 0;
+              left: 50px;
+              margin-left: 0;
+              display: inline;
+              max-height: 1000px;
+            }
+          }
+        }
+      }
+      li.separator {
+        margin: 10px 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakPointSm) {
+  .app-sidebar {
+    transform: translate(-100%);
+    transition: all 0.3s ease;
+  }
+
+  .sidebar-overlay {
+    background: $sidebarMobileOverlay;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+  }
+
+  .side-menu-collapsed {
+    .app-sidebar {
+      transform: translate(0%);
+
+      > nav {
+        overflow-y: auto;
+      }
+    }
+  }
+}

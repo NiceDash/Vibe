@@ -1,0 +1,34 @@
+/* PAGINATION STYLES
+   ----------------------------- */
+
+.pagination {
+  > li {
+    > a {
+      @include buttonBorder(#d5dce6);
+      color: #333c48;
+      @include buttonGradient(#ffffff, $btnColorDefault);
+
+      &:focus,
+      &:hover {
+        @include buttonGradient(#ffffff, #e5e8ef);
+      }
+    }
+  }
+
+  .page-item {
+    &.active {
+      .page-link {
+        background: $paginationActiveColor;
+        border-color: $paginationActiveColor;
+      }
+    }
+  }
+}
+
+.pager {
+  li {
+    a {
+      @include defaultButtonStyle;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+/* AVATARS STYLES
+   ----------------------------- */
+
+.avatar {
+	border-radius: 2px;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	line-height: 0;
+
+	.user-initials {
+	    -webkit-user-select: none;
+	    -moz-user-select: none;
+	    user-select: none;
+	    line-height: 30px;
+	    color: #fff;
+	    font-weight: 700;
+	    text-align: center;
+	    text-transform: uppercase;
+	}
+
+	img {
+		line-height: 0;
+	    position: relative;
+	    border-radius: 2px;
+	    display: inline-block;
+	}
+
+	&.avatar-small {
+	    width: 18px;
+	    height: 18px;
+
+	    .user-initials {
+	    	line-height: 18px;
+	    	font-size: 10px;
+	    }
+	}
+
+	
+}

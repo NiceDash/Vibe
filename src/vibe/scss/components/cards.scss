@@ -1,0 +1,49 @@
+/* CARD STYLES
+   ----------------------------- */
+
+.card {
+	background: white;
+	border-radius: $cardRoundedCorner;
+	@include cardShadow;
+	border: 0;
+	margin-bottom: 20px;
+
+	hr {
+		margin-left: -$panelPadding;
+		margin-right: -$panelPadding;
+		border-color: #ebeef2; 
+	}
+}
+
+.card-header,
+.card-footer {
+	color: $panelHeadingColor;
+	padding: $panelPadding $panelPadding;
+	border-color: transparent;
+	position: relative;
+	font-size: $panelHeadingFontSize;
+	background-color: transparent;
+}
+
+.card-header {
+	padding-bottom: 0;
+}
+
+.card-body {
+	padding: $panelPadding $panelPadding;
+}
+
+.card-footer {
+	border-color: #dcdcdc;
+}
+
+// &.bg-transparent {
+// 	background: transparent;
+// 	box-shadow: none;
+
+// 	.panel-heading {
+// 		background: transparent;
+// 		border-bottom: 0;
+// 	}
+// }
+

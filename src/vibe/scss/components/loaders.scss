@@ -1,0 +1,17 @@
+/* LOADER STYLES
+   ----------------------------- */
+
+.loader{
+  width: 50px;
+  height: 50px;
+  text-indent: -9999em;
+  margin: 0 auto;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: top left;
+
+  &.small {
+    width: 25px;
+    height: 25px;
+  }
+}

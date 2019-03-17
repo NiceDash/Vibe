@@ -1,0 +1,43 @@
+/* MODAL STYLES
+   ----------------------------- */
+
+.modal {
+
+	.modal-header {
+		border-bottom: 0;
+	}
+
+	.modal-content {
+	    box-shadow: 0 4px 12px rgba(0,0,0,.2);
+    	border: 0;
+	}
+
+	.modal-footer {
+		border-top: 0;
+	}
+
+	.modal-content {
+		border-radius: $cardRoundedCorner;
+		@include cardShadow;
+		padding: $panelPadding;
+	}
+
+	&.fade {
+		.modal-dialog {
+			opacity: 0;
+			transform: translate(0, -7%) scale(0.9);
+			transition: all .25s ease;
+		}
+
+		&.show {
+			.modal-dialog {
+				opacity: 1;
+				transform: translate(0, 0%) scale(1);
+			}
+		}
+	}
+}
+
+.modal-backdrop {
+	background-color: $modalOverlayBG;
+}

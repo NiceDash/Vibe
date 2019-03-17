@@ -1,0 +1,70 @@
+/* NOITIFY STYLES
+   ----------------------------- */
+
+.notify-wrap {
+	position: relative;
+}
+
+.notify {
+	position: absolute;
+	top: -4px;
+	right: -4px;
+	display: block;
+	width: 10px;
+	height: 10px;
+	border-radius: 100px;
+	opacity: .8;
+	z-index: 9;
+	background-color: $notifyColorDanger;
+
+	.notify-ring {
+	    position: absolute;
+	    top: -6px;
+	    right: -6px;
+	    height: 22px;
+	    width: 22px;
+	    border: 3px solid $notifyColorDanger;
+	    border-radius: 100%;
+	    -webkit-animation: notify-pulsate 1s ease-out;
+	    -webkit-animation-iteration-count: infinite;
+	    opacity: 0.0;
+	}
+
+	&.notify-danger {
+		background-color: $notifyColorDanger;
+
+		.notify-ring {
+			border-color: $notifyColorDanger;
+		}
+	}
+
+	&.notify-info {
+		background-color: $notifyColorInfo;
+
+		.notify-ring {
+			border-color: $notifyColorInfo;
+		}
+	}
+
+	&.notify-success {
+		background-color: $notifyColorSuccess;
+
+		.notify-ring {
+			border-color: $notifyColorSuccess;
+		}
+	}
+
+	&.notify-warning {
+		background-color: $notifyColorWarning;
+
+		.notify-ring {
+			border-color: $notifyColorWarning;
+		}
+	}
+
+	@-webkit-keyframes notify-pulsate {
+	    0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;border-width: 6px;}
+	    50% {opacity: 1.0;}
+	    100% {-webkit-transform: scale(1.5, 1.5); opacity: 0.0;border-width: 1px;}
+	}
+}

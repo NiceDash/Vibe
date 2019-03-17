@@ -1,0 +1,57 @@
+/* SUBNAV STYLES
+   ----------------------------- */
+
+.page-sub-nav {
+	border-bottom: 1px solid darken($subnavBgColor, 30%);
+    padding: 0px 15px;
+    border-top: 1px solid darken($subnavBgColor, 10%);
+    margin: -$pageContentPadding;
+    margin-bottom: $pageContentPadding;
+    background-color: $subnavBgColor;
+
+    > ul {
+    	> li {
+    		margin-left: 0;
+
+    		> .nav-link {
+    			color: $subnavLinkColor;
+    			padding: 15px;
+    			border-radius: 0;
+    			border-bottom: 2px solid;
+    			border-color: transparent;
+    			transition: .2s ease all;
+
+    			&:focus,
+    			&:hover {
+					color: darken($subnavLinkColor, 30%);
+    				background-color: transparent;
+    			}
+    		}
+
+			> .nav-link.active {
+				color: $subnavLinkColorActive;
+				background-color: transparent;
+				border-color: $subnavLinkColorActive;
+
+				&:focus,
+				&:hover {
+					color: $subnavLinkColorActive;
+					background-color: transparent;
+				}
+			}
+    	}
+    }
+
+    .open {
+    	> a {
+    		background-color: transparent!important;
+    		border-color: transparent!important;
+    	}
+    }
+
+    .dropdown-menu {
+    	margin-top: 0;
+	    border-radius: 0 0 3px 3px;
+	    border-top: 1px solid transparent;
+    }
+}

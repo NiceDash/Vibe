@@ -1,0 +1,111 @@
+/* SWITCH STYLES
+   ----------------------------- */
+
+.switch {
+  padding-right: 0;
+  cursor: pointer;
+}
+
+.switch-input{
+  opacity: 0;
+  position: absolute;
+
+  & + .switch-label {
+    position: relative;
+    display: inline-block;
+
+    &:before {
+      content: ' ';
+      border-radius: $switchBorderRadius;
+      display: inline-block;
+      background-color: $switchOffBgColor;
+      width: $switchWidth;
+      height: $switchIndicatorSize + ($switchBorderSpaceSize * 2);
+      transition: background $switchSpeed ease;
+    }
+    &:after {
+      content: ' ';
+      position: absolute;
+      top: $switchBorderSpaceSize;
+      left: $switchBorderSpaceSize;
+      border-radius: $switchBorderRadius - $switchBorderSpaceSize;
+      width: $switchIndicatorSize;
+      height: $switchIndicatorSize;
+      background-color: $switchIndicatorOffColor;
+      transition: left $switchSpeed ease;
+    }
+  }
+
+  &:checked {
+    & + .switch-label:before {
+      background-color: $switchDefaultColor;
+    }
+    & + .switch-label:after {
+      left: $switchWidth - $switchIndicatorSize - $switchBorderSpaceSize;
+      background-color: $switchIndicatorOnColor;
+    }
+  }
+
+  &:focus {
+    & + .switch-label {
+      // @include linkHover;
+    }
+  }
+}
+
+.switch-lg {
+  .switch-input {
+    & + .switch-label {
+      &:before {
+        width: $switchLargeWidth;
+        height: $switchIndicatorLargeSize + ($switchBorderSpaceSize * 2);
+      }
+      &:after {
+        width: $switchIndicatorLargeSize;
+        height: $switchIndicatorLargeSize;
+      }
+    }
+
+    &:checked {
+      & + .switch-label:after {
+        left: $switchLargeWidth - $switchIndicatorLargeSize - $switchBorderSpaceSize;
+      }
+    }
+  }
+}
+
+.switch.switch-primary {
+  > .switch-input:checked {
+    & +.switch-label:before {
+      background-color: $switchPrimaryColor;
+    }
+  }
+}
+.switch.switch-success {
+  > .switch-input:checked {
+    & + .switch-label:before {
+      background-color: $switchSuccessColor;
+    }
+  }
+}
+.switch.switch-danger{
+  > .switch-input:checked {
+    & + .switch-label:before {
+      background-color: $switchDangerColor;
+    }
+  }
+}
+.switch.switch-info {
+  > .switch-input:checked {
+    & + .switch-label:before {
+      background-color: $switchInfoColor;
+    }
+  }
+}
+.switch.switch-warning {
+  > .switch-input:checked {
+    & + .switch-label:before {
+      background-color: $switchWarningColor;
+    }
+  }
+}

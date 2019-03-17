@@ -1,0 +1,25 @@
+.skip-to-content {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    left: calc(50% - 70px);
+    margin: 0;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    background: $skipToContentBGColor;
+    color: $skipToContentTextColor;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 0 0 $skipToContentBorderRadius $skipToContentBorderRadius;
+    transform: translateY(-100%);
+    transition: .2s ease transform;
+
+    &:focus {
+        transform: translateY(0%);
+		z-index: 999;
+	    width: 180px;
+	    height: auto;
+	    clip: auto;
+	    padding: 10px;
+    }
+}

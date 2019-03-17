@@ -1,0 +1,99 @@
+/* ALERT STYLES
+   ----------------------------- */
+
+.alert {
+  border: 0;
+
+  &.alert-primary {
+    color: $alertTextColorPrimary;
+    background-color: $alertBgColorPrimary;
+
+    .close {
+      color: $alertTextColorPrimary;
+      opacity: 1;
+      text-shadow: 0px 1px 0px darken($alertBgColorPrimary, 7);
+    }
+
+    a {
+      color: $alertTextColorPrimary;
+      text-decoration: underline;
+    }
+  }
+
+  &.alert-info {
+    color: $alertTextColorInfo;
+    background-color: $alertBgColorInfo;
+
+    .close {
+      color: $alertTextColorInfo;
+      opacity: 1;
+      text-shadow: 0px 1px 0px darken($alertBgColorInfo, 7);
+    }
+
+    a {
+      color: $alertTextColorInfo;
+      text-decoration: underline;
+    }
+  }
+
+  &.alert-warning {
+    color: $alertTextColorWarning;
+    background-color: $alertBgColorWarning;
+
+    .close {
+      color: $alertTextColorWarning;
+      opacity: 1;
+      text-shadow: 0px 1px 0px darken($alertBgColorWarning, 7);
+    }
+
+    a {
+      color: $alertTextColorWarning;
+      text-decoration: underline;
+    }
+  }
+  &.alert-success {
+    color: $alertTextColorSuccess;
+    background-color: $alertBgColorSuccess;
+
+    .close {
+      color: $alertTextColorSuccess;
+      opacity: 1;
+      text-shadow: 0px 1px 0px darken($alertBgColorSuccess, 7);
+    }
+
+    a {
+      color: $alertTextColorSuccess;
+      text-decoration: underline;
+    }
+  }
+  &.alert-danger {
+    color: $alertTextColorDanger;
+    background-color: $alertBgColorDanger;
+
+    .close {
+      color: $alertTextColorDanger;
+      opacity: 1;
+      text-shadow: 0px 1px 0px darken($alertBgColorDanger, 7);
+    }
+
+    a {
+      color: $alertTextColorDanger;
+      text-decoration: underline;
+    }
+  }
+
+  .close {
+    top: 0;
+  }
+}
+
+//page alert
+.page-level-alert {
+  margin-bottom: 0;
+  border-radius: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}

@@ -1,0 +1,35 @@
+/* BODER UTILITY STYLES
+   ----------------------------- */
+
+$borderColor: #d5dce6;
+
+.no-border {
+  border-color: transparent;
+  border-width: 0; }
+
+.no-borders {
+  border-width: 0 !important; }
+
+.b {
+  border-color: $borderColor;
+  background-clip: padding-box; }
+
+.b-a {
+  border: 1px solid $borderColor;
+}
+
+.b-t {
+  border-top: 1px solid $borderColor;
+}
+
+.b-r {
+  border-right: 1px solid $borderColor;
+}
+
+.b-b {
+  border-bottom: 1px solid $borderColor;
+}
+
+.b-l {
+  border-left: 1px solid $borderColor;
+}

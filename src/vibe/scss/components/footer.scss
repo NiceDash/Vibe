@@ -1,0 +1,23 @@
+/* FOOTER STYLES
+   ----------------------------- */
+
+.app-footer {
+    color: #6d6d6d;
+    padding: $pageContentPadding;
+    margin-left: $sidebarWidth;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.side-menu-collapsed {
+    .app-footer {
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: $breakPointSm) {
+    .app-footer {
+        margin-left: 0px!important;
+    }
+}

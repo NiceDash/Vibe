@@ -1,0 +1,17 @@
+.PageLoaderWrap {
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  opacity: 1;
+  transition: 0.3s ease all;
+  transition-delay: 0.3s;
+
+  .PageLoader {
+    height: 100%;
+    background: $pageLoaderColor;
+    width: 0%;
+    transition: 0.3s ease all;
+  }
+}

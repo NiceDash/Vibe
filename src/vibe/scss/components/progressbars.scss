@@ -1,0 +1,68 @@
+/* PROGRESS BAR STYLES
+   ----------------------------- */
+
+.progress {
+	height: $progressBarHeight;
+	border-radius: $progressBarBorderRadius;
+	box-shadow: none;
+	background-color: $progressBarEmptyBgColor;
+
+	.progress-bar {
+		box-shadow: none;
+		line-height: $progressBarHeight;
+		background-color: $progressBarBgColor;
+
+		&:last-child {
+			border-radius: 0 20px 20px 0;
+		}
+	}
+
+	&.progress-stacked {
+		.progress-bar {
+			border-radius: 0;
+
+			&:last-child {
+				border-radius: 0 $progressBarBorderRadius $progressBarBorderRadius 0;
+			}
+		}
+	}
+
+	// Sizes
+	&.progress-sm {
+	    height: $progressBarHeightSm !important;
+
+	    .progress-bar {
+		    line-height: $progressBarHeightSm;
+		}
+	}
+	&.progress-md {
+	    height: $progressBarHeightMd !important;
+
+	    .progress-bar {
+		    line-height: $progressBarHeightMd;
+		}
+	}
+	&.progress-lg {
+	    height: $progressBarHeightLg !important;
+
+	    .progress-bar {
+		    line-height: $progressBarHeightLg;
+		}
+	}
+}
+
+.progress-bar-primary {
+	background-color: $progressBarColorPrimary;
+}
+.progress-bar-success {
+	background-color: $progressBarColorSuccess;
+}
+.progress-bar-info {
+	background-color: $progressBarColorInfo;
+}
+.progress-bar-warning {
+	background-color: $progressBarColorWarning;
+}
+.progress-bar-danger {
+	background-color: $progressBarColorDanger;
+}

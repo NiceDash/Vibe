@@ -1,0 +1,37 @@
+/* BREADCRUMBS STYLES
+   ----------------------------- */
+   
+.breadcrumb {
+	background: none;
+	padding: 0;
+	font-size: 14px;
+
+    a {
+    	color: $breadcrumbLinkColor;
+
+    	i {
+    		font-size: 11px;
+    	}
+	}
+
+	.breadcrumb-item {
+		&.active {
+			color: #777;
+	
+			a {
+				color: #777;
+			}
+		}
+	}
+	
+	
+
+    > li + li {
+    	&:before {
+			content: "\f054"!important;
+			color: #ccc!important;
+		    font-family: 'FontAwesome';
+		    font-size: 10px;
+    	}
+    }
+}

@@ -1,0 +1,43 @@
+@mixin cardShadow {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+// buttons
+
+@mixin buttonGradient($color1, $color2) {
+	background: $color2;
+	background: linear-gradient(to bottom,  $color1 0%, $color2 100%);
+}
+@mixin buttonBorder($color) {
+	border: 1px solid $color;
+}
+
+@mixin defaultButtonStyle {
+	border: 1px solid #d2d2d2;
+	box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+	color: #616161;
+	@include buttonGradient(#ffffff, $btnColorDefault);    
+
+    &:focus,
+    &:hover {
+    	@include buttonGradient(#ffffff, #e5e8ee);
+	}
+
+	&:focus {
+		box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.4);
+	}
+
+	&:not(:disabled):not(.disabled):active {
+		@include buttonGradient(darken(#ffffff, 3%), darken(#e5e8ee, 3%));
+		color: #7a7a7a!important;
+		background-color: darken(#e5e8ee, 3%)!important;
+		border-color: #dfe3ea;
+	}
+	
+}
+
+//accessibility
+
+@mixin linkHover {
+    outline: -webkit-focus-ring-color auto 5px;
+}

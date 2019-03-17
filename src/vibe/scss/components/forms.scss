@@ -1,0 +1,54 @@
+/* FORM STYLES
+   ----------------------------- */
+
+label {
+    color: #7f8fa4;
+    padding-right: 1rem;
+    font-weight: 400;
+}
+
+.form-control {
+    outline: none;
+    line-height: 1.5em;
+    padding-left: .8rem;
+    padding-right: .8rem;
+    background: #fff;
+    border: 1px solid $formColorBorderColor;
+    box-shadow: inset 0 2px 0 0 #f2f5f8;
+    border-radius: $formColorBorderRadius;
+}
+
+//addons
+.input-group-addon {
+    background-color: $addonBgColor;
+    border-color: darken($addonBgColor, 8%)
+}
+.input-group-btn + .form-control {
+    border-left: 0;
+}
+
+
+.has-success {
+    .control-label {
+        color: $formControlColorSuccess;
+    }
+    .form-control {
+        border-color: $formControlColorSuccess;
+    }
+}
+.has-warning {
+    .control-label {
+        color: $formControlColorWarning;
+    }
+    .form-control {
+        border-color: $formControlColorWarning;
+    }
+}
+.has-error {
+    .control-label {
+        color: $formControlColorDanger;
+    }
+    .form-control {
+        border-color: $formControlColorDanger;
+    }
+}

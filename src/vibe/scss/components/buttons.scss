@@ -1,0 +1,128 @@
+/* BUTTON STYLES
+   ----------------------------- */
+.btn {
+	border-radius: $btnBorderRadius;
+	transition: all $btnTransitionSpeed ease;
+
+	&.btn-primary {
+		background-color: $btnColorPrimary;
+		@include buttonBorder($btnColorPrimary);
+
+		&:focus,
+	    &:hover {
+	    	background-color: darken($btnColorPrimary, 10%);
+	    	@include buttonBorder(darken($btnColorPrimary, 10%));
+	    }
+	}
+	
+	&.btn-secondary {
+		@include defaultButtonStyle;
+	}
+
+	&.btn-success {
+		color: #fff;
+		background-color: $btnColorSuccess;
+		@include buttonBorder($btnColorSuccess);
+
+		&:focus,
+	    &:hover {
+	    	background-color: darken($btnColorSuccess, 10%);
+	    	@include buttonBorder(darken($btnColorSuccess, 10%));
+	    }
+	}
+
+	&.btn-danger {
+		color: #fff;
+		background-color: $btnColorDanger;
+		@include buttonBorder($btnColorDanger);
+
+		&:focus,
+	    &:hover {
+	    	background-color: darken($btnColorDanger, 10%);
+	    	@include buttonBorder(darken($btnColorDanger, 10%));
+	    }
+	}
+
+	&.btn-info {
+		color: #fff;
+		background-color: $btnColorInfo;
+		@include buttonBorder($btnColorInfo);
+
+		&:focus,
+	    &:hover {
+	    	background-color: darken($btnColorInfo, 10%);
+	    	@include buttonBorder(darken($btnColorInfo, 10%));
+	    }
+	}
+
+	&.btn-warning {
+		color: #fff;
+		background-color: $btnColorWarning;
+		@include buttonBorder($btnColorWarning);
+
+		&:focus,
+	    &:hover {
+	    	background-color: darken($btnColorWarning, 10%);
+	    	@include buttonBorder(darken($btnColorWarning, 10%));
+		}
+		
+		&:active {
+			color: #fff!important;
+		}
+	}
+
+	&.btn-outline-primary {
+		@include buttonBorder($btnColorPrimary);
+
+		&:focus,
+	    &:hover {
+	    	background-color: $btnColorPrimary;
+	    	@include buttonBorder($btnColorPrimary);
+	    }
+	}
+	&.btn-outline-secondary {
+		@include buttonBorder($btnColorSecondary);
+
+		&:focus,
+	    &:hover {
+	    	@include defaultButtonStyle;
+	    	@include buttonBorder(darken($btnColorSecondary, 10%));
+	    }
+	}
+	&.btn-outline-success {
+		@include buttonBorder($btnColorSuccess);
+
+		&:focus,
+	    &:hover {
+	    	background-color: $btnColorSuccess;
+	    	@include buttonBorder($btnColorSuccess);
+	    }
+	}
+	&.btn-outline-info {
+		@include buttonBorder($btnColorInfo);
+
+		&:focus,
+	    &:hover {
+	    	background-color: $btnColorInfo;
+			@include buttonBorder($btnColorInfo);
+		}
+	}
+	&.btn-outline-warning {
+		@include buttonBorder($btnColorWarning);
+
+		&:focus,
+	    &:hover {
+	    	background-color: $btnColorWarning;
+			@include buttonBorder($btnColorWarning);
+		}
+	}
+	&.btn-outline-danger {
+		@include buttonBorder($btnColorDanger);
+
+		&:focus,
+	    &:hover {
+	    	background-color: $btnColorDanger;
+			@include buttonBorder($btnColorDanger);
+		}
+	}
+}

@@ -1,0 +1,90 @@
+/* TIMELINE STYLES
+   ----------------------------- */
+
+ul.timeline {
+	position: relative;
+    padding: 20px 0 20px;
+    list-style: none;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    &:before {
+	    content: " ";
+	    position: absolute;
+	    top: 0;
+	    bottom: 0;
+	    width: 3px;
+	    margin-left: 22.5px;
+	    background-color: $timelineBorderColor;
+    }
+
+    &:after {
+    	content: ' ';
+    	display: block;
+    	width: 15px;
+    	height: 15px;
+    	background-color: $timelineBorderColor;
+	    position: absolute;
+		top: -8px;
+		left: 17px;
+		border-radius: 100px;
+
+    }
+
+	> li {
+	    position: relative;
+    	margin-bottom: 20px;
+
+    	.timeline-badge {
+		    z-index: 100;
+		    position: absolute;
+		    top: 16px;
+		    width: 50px;
+		    height: 50px;
+		    border-radius: 50% 50% 50% 50%;
+		    text-align: center;
+		    font-size: 1.4em;
+		    line-height: 50px;
+		    color: #fff;
+		    overflow: hidden;
+		    background-color: #4c5667;
+
+		    &.success { background-color: $timelineBadgeColorSuccess !important; }
+		    &.info { background-color: $timelineBadgeColorInfo !important; }
+		    &.danger { background-color: $timelineBadgeColorDanger !important; }
+		    &.warning { background-color: $timelineBadgeColorWarning !important; }
+    	}
+
+    	.timeline-content {
+		    padding: 20px;
+		    border: 2px solid $timelineBorderColor;
+		    border-radius: 4px;
+		    margin-left: 70px;
+		    position: relative;
+
+		    &:before {
+				content: " ";
+			    display: inline-block;
+			    position: absolute;
+			    top: 29px;
+			    left: -10px;
+			    border-top: 8px solid transparent;
+			    border-right: 8px solid $timelineBorderColor;
+			    border-bottom: 8px solid transparent;
+			    right: auto;
+		    }
+
+		    &:after {
+	    	    content: " ";
+			    display: inline-block;
+			    position: absolute;
+			    top: 30px;
+			    left: -7px;
+			    border-top: 7px solid transparent;
+			    border-right: 7px solid #fff;
+			    border-bottom: 7px solid transparent;
+			    right: auto;
+		    }
+    	}
+	}
+}

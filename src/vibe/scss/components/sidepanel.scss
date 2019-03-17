@@ -1,0 +1,68 @@
+/* SIDE PANEL STYLES
+   ----------------------------- */
+
+$sidePanelBgColor: #fbfcfd;
+$sidePanelWidth: 500px;
+
+.sidebar-panel {
+    @include cardShadow;
+    border: 0;
+    border-radius: $cardRoundedCorner;
+    overflow: hidden;
+    background: white;
+    height: 100%;
+    display: flex;
+
+    .side-content {
+        background: $sidePanelBgColor;
+        width: $sidePanelWidth;
+        padding: $panelPadding;
+        border-right: 1px solid #ebebf1;
+        height: 100%;
+        box-sizing: border-box;
+        display: block;
+    }
+
+    .main-content {
+        padding: $panelPadding;
+        width: 100%;
+    }
+}
+
+.sidebar-panel-mobile-toggle {
+    display: none;
+    background-color: $sidePanelBgColor;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+
+    &:hover,
+    &:focus {
+        background-color: darken($sidePanelBgColor, 5%);
+        text-decoration: none;
+        outline: 0!important;
+    }
+}
+
+@media screen and (min-width: $breakPointSm) {
+    .side-content {
+        display: block!important;
+    }
+}
+
+@media screen and (max-width: $breakPointSm) {
+    .sidebar-panel {
+        display: block;
+    }
+    .sidebar-panel-mobile-toggle {
+        display: block;
+    }
+
+    .sidebar-panel {
+        .side-content {
+            width: 100%;
+            height: auto;
+            display: none;
+        }
+    }
+}

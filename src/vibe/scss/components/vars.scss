@@ -1,0 +1,198 @@
+//globals
+$globalBackgroundColor: #f2f5f9;
+$globalFontFamily: 'Open Sans', sans-serif;
+
+// Colors
+$colorPrimary: #127cd8;
+$colorInfo: #337ab7;
+$colorSuccess: #22b66e;
+$colorWarning: #ffb400;
+$colorDanger: #e74c4b;
+
+$colorOrange: #f68b38;
+$colorBlue: #127cd8;
+$colorGold: #ffcc00;
+$colorLightGrey: #f2f4f7;
+
+$colorTextMuted: #85939d;
+
+$colorFacebook: #3b5998;
+$colorTwitter: #55acee;
+$colorLinkedin: #1178b2;
+$colorGithub: #24292e;
+
+// Typography
+$h1Size: 2.5rem;
+$h2Size: 2rem;
+$h3Size: 1.5rem;
+$h4Size: 1.25rem;
+$h5Size: 1rem;
+$h6Size: 0.75rem;
+
+//buttons
+$btnColorDefault: #f8f8fa;
+$btnColorPrimary: $colorPrimary;
+$btnColorSecondary: #5f5f5f;
+$btnColorSuccess: $colorSuccess;
+$btnColorDanger: $colorDanger;
+$btnColorInfo: #5bc0de;
+$btnColorWarning: #f0ad4e;
+$btnTransitionSpeed: 0.15s;
+$btnBorderRadius: 4px;
+
+// Sidebar
+$sidenavBgColor: #162c50;
+$collapseSpeed: 0.2s;
+$sidebarWidth: 240px;
+$sidenavBgHover: darken($sidenavBgColor, 6%);
+$sideNavTextColor: lighten($sidenavBgColor, 50%);
+$sideNavSeparatorColor: desaturate(lighten($sidenavBgColor, 20%), 10%);
+$activeNavBorderColor: lighten(
+  saturate(adjust-hue($sidenavBgColor, -10), 60%),
+  35%
+);
+$sidebarMobileOverlay: rgba(33, 53, 86, 0.4);
+
+// Page Content
+$pageContentPadding: 32px;
+
+// Pagination
+$paginationActiveColor: $colorPrimary;
+
+// Panels and Cards
+$panelPadding: 16px;
+$panelHeadingColor: $colorTextMuted;
+$panelHeadingFontSize: 15px;
+
+// Forms
+$formControlColorSuccess: $colorSuccess;
+$formControlColorWarning: $colorWarning;
+$formControlColorDanger: $colorDanger;
+$formColorBorderColor: #d5dce6;
+$formColorBorderRadius: 4px;
+$addonBgColor: #f7f7f7;
+
+// Border radius
+$globalBorderRadius: 4px;
+$cardRoundedCorner: $globalBorderRadius;
+
+// Alerts
+$alertBgColorPrimary: $colorPrimary;
+$alertBgColorSuccess: $colorSuccess;
+$alertBgColorWarning: $colorWarning;
+$alertBgColorDanger: $colorDanger;
+$alertBgColorInfo: $sidenavBgColor;
+$alertTextColorPrimary: rgba(255, 255, 255, 0.85);
+$alertTextColorSuccess: rgba(255, 255, 255, 0.85);
+$alertTextColorWarning: #fff;
+$alertTextColorDanger: rgba(255, 255, 255, 0.85);
+$alertTextColorInfo: rgba(255, 255, 255, 0.85);
+
+// Breadcrumbs
+$breadcrumbLinkColor: #4a4a4a;
+$breadcrumbActiveColor: #777;
+
+//loaders
+$loaderColor: #313c4f;
+
+// Page Loader
+$pageLoaderColor: $colorPrimary;
+
+// Checkbox and Radios
+$checkboxColorPrimary: $colorPrimary;
+$checkboxColorSuccess: $colorSuccess;
+$checkboxColorDanger: $colorDanger;
+$checkboxColorInfo: $colorInfo;
+$checkboxColorWarning: $colorWarning;
+$checkboxCheckColor: #ffffff;
+
+// Progress Bars
+$progressBarBgColor: $colorPrimary;
+$progressBarColorPrimary: $colorPrimary;
+$progressBarColorSuccess: $colorSuccess;
+$progressBarColorInfo: $colorInfo;
+$progressBarColorWarning: $colorWarning;
+$progressBarColorDanger: $colorDanger;
+$progressBarEmptyBgColor: #f5f5f5;
+$progressBarBorderRadius: 100px;
+$progressBarHeight: 10px;
+$progressBarHeightSm: 5px;
+$progressBarHeightMd: 24px;
+$progressBarHeightLg: 32px;
+
+// Switches
+$switchWidth: 40px;
+$switchIndicatorSize: 20px;
+$switchLargeWidth: 50px;
+$switchIndicatorLargeSize: 30px;
+$switchDefaultColor: $colorPrimary;
+$switchPrimaryColor: $colorPrimary;
+$switchSuccessColor: $colorSuccess;
+$switchDangerColor: $colorDanger;
+$switchInfoColor: $colorInfo;
+$switchWarningColor: $colorWarning;
+$switchOffBgColor: #a9a9a9;
+$switchIndicatorOnColor: #fff;
+$switchIndicatorOffColor: #fff;
+$switchSpeed: 0.2s;
+$switchBorderRadius: 50px;
+$switchBorderSpaceSize: 2px;
+
+// Tables
+$stripedTableColor: #f6f7fb;
+$tableBorderColor: #eceff2;
+$tableTextColor: #85939d;
+$tableBgColorHeader: #f8f9fb;
+$tableBgRowHover: #e9f8ff;
+
+// Tabs
+$tabHeadingBgColor: #f5f6f7;
+$tabLinkColor: #707070;
+
+// Tooltips
+$tooltipRoundedCorner: $cardRoundedCorner;
+
+// Modals
+$modalOverlayBG: #162c50;
+
+// Badges
+$badgeBorderRadius: 3px;
+
+// Timeline
+$timelineBorderColor: #ebebf1;
+$timelineBadgeColorSuccess: $colorSuccess;
+$timelineBadgeColorInfo: $colorInfo;
+$timelineBadgeColorDanger: $colorDanger;
+$timelineBadgeColorWarning: $colorWarning;
+
+// Slide Panel
+$slidePanelWidth: 370px;
+
+// Code
+$codeBgColor: $colorPrimary;
+$codeTextColor: lighten($colorPrimary, 35%);
+
+// Subnav
+$subnavBgColor: hsla(0, 0%, 100%, 0.5);
+$subnavLinkColor: #8e9096;
+$subnavLinkColorActive: $colorPrimary;
+$subnavLinkBgColorActive: rgba(107, 122, 136, 0.1);
+
+// Notify
+$notifyColorDanger: $colorDanger;
+$notifyColorInfo: $colorInfo;
+$notifyColorWarning: $colorWarning;
+$notifyColorSuccess: $colorSuccess;
+
+// Skip To Content
+$skipToContentTextColor: #fff;
+$skipToContentBGColor: #323d50;
+$skipToContentBorderRadius: 5px;
+
+// uncategorized
+$hrColor: #dcdcdc;
+
+// Bootstrap breakpoints
+$breakPointXs: 768px;
+$breakPointSm: 992px;
+$breakPointMd: 1200px;

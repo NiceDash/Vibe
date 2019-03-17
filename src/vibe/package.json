@@ -1,0 +1,6 @@
+{
+    "name": "vibe",
+    "description": "Vibe Components",
+    "version": "1.0.0",
+    "main": "index.js"
+  }

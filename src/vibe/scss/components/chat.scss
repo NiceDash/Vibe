@@ -1,0 +1,51 @@
+/* CHAT STYLES
+   ----------------------------- */
+.ChatBoxContainer {
+    position: fixed;
+    bottom: 0;
+    right: 40px;
+    overflow: visible;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+}
+
+.Chat-wrap {
+    border-top: 1px solid #eee;
+}
+
+.ChatBox {
+    width: 300px;
+    border-radius: 2px 2px 0 0;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.1), 0 4px 6px rgba(0,0,0,.2);
+    background: white;
+    margin-left: 16px;
+}
+
+.ChatHeader {
+    padding: 10px 16px;
+    border-radius: 2px 2px 0 0;
+    cursor: pointer;
+}
+
+.ChatDisplay {
+    border-color: #eee;
+}
+
+.ChatSubText {
+    font-size: 10px;
+}
+
+.CloseChat {
+    border: 0;
+    background: transparent;
+    color: #333;
+    border-radius: 50px;
+    float: right;
+    cursor: pointer;
+
+    &:hover {
+        background: #eee;
+    }
+}
