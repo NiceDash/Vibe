@@ -17,7 +17,7 @@
     "chart.js": "^2.7.3",
     "classnames": "^2.2.6",
     "react-chartjs-2": "2.6.4",
-    "react-feather": "^1.0.8",
+    "react-feather": "^1.1.6",
     "react-fontawesome": "1.6.1"
   },
   "scripts": {

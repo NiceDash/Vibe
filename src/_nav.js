@@ -3,7 +3,7 @@ export default {
     {
       name: 'Home',
       url: '/home',
-      icon: 'Home'
+      icon: 'Home',
     },
     {
       name: 'UI Elements',
@@ -11,61 +11,61 @@ export default {
       children: [
         {
           name: 'Buttons',
-          url: '/elements/buttons'
+          url: '/elements/buttons',
         },
         {
           name: 'Grid',
-          url: '/elements/grid'
+          url: '/elements/grid',
         },
         {
           name: 'Alerts',
-          url: '/elements/alerts'
+          url: '/elements/alerts',
         },
         {
           name: 'Typography',
-          url: '/elements/typography'
+          url: '/elements/typography',
         },
         {
           name: 'Cards',
-          url: '/elements/cards'
+          url: '/elements/cards',
         },
         {
           name: 'Tabs',
-          url: '/elements/tabs'
+          url: '/elements/tabs',
         },
         {
           name: 'Tables',
-          url: '/elements/tables'
+          url: '/elements/tables',
         },
         {
           name: 'Breadcrumbs',
-          url: '/elements/breadcrumbs'
+          url: '/elements/breadcrumbs',
         },
         {
           name: 'Forms',
-          url: '/elements/forms'
+          url: '/elements/forms',
         },
         {
           name: 'Modals',
-          url: '/elements/modals'
+          url: '/elements/modals',
         },
         {
           name: 'Loaders',
-          url: '/elements/loaders'
+          url: '/elements/loaders',
         },
         {
           name: 'Avatars',
-          url: '/elements/avatars'
+          url: '/elements/avatars',
         },
         {
           name: 'Progress Bars',
-          url: '/elements/progressbars'
+          url: '/elements/progressbars',
         },
         {
           name: 'Pagination',
-          url: '/elements/pagination'
-        }
-      ]
+          url: '/elements/pagination',
+        },
+      ],
     },
     {
       name: 'Pages',
@@ -73,17 +73,17 @@ export default {
       children: [
         {
           name: 'Blank',
-          url: '/pages/blank'
+          url: '/pages/blank',
         },
         {
           name: 'Sub Navigation',
-          url: '/pages/subnav'
+          url: '/pages/subnav',
         },
         {
           name: '404',
-          url: '/pages/404'
-        }
-      ]
+          url: '/pages/404',
+        },
+      ],
     },
     {
       name: 'Apps',
@@ -91,40 +91,40 @@ export default {
       children: [
         {
           name: 'Analytics',
-          url: '/apps/analytics'
+          url: '/apps/analytics',
         },
         {
           name: 'Invoice',
-          url: '/apps/invoice'
+          url: '/apps/invoice',
         },
         {
           name: 'Activity Feed',
-          url: '/apps/feed'
+          url: '/apps/feed',
         },
         {
           name: 'CMS',
-          url: '/apps/cms'
-        }
-      ]
+          url: '/apps/cms',
+        },
+      ],
     },
     {
-      divider: true
+      divider: true,
     },
     {
       name: 'Widgets',
       url: '/widgets',
       icon: 'Package',
       badge: {
-        text: 'NEW'
-      }
-    }
+        text: 'NEW',
+      },
+    },
   ],
   bottom: [
     {
-      name: 'Purchase Vibe',
-      url: 'http://www.nicedash.com',
-      icon: 'ShoppingBag',
-      external: true
+      name: 'Get Vibe',
+      url: 'https://github.com/NiceDash/Vibe',
+      icon: 'GitHub',
+      external: true,
     },
     {
       name: 'Account',
@@ -132,8 +132,8 @@ export default {
       icon: 'User',
       badge: {
         variant: 'success',
-        text: '3'
-      }
-    }
-  ]
+        text: '3',
+      },
+    },
+  ],
 };

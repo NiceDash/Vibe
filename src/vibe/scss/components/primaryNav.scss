@@ -6,6 +6,8 @@
   left: 0px;
   width: $sidebarWidth;
   background: $sidenavBgColor;
+  display: flex;
+  flex-direction: column;
 
   &.has-alert {
     top: 48px;
@@ -13,7 +15,6 @@
 
   > nav {
     flex: 1 1;
-    height: 100%;
 
     &::-webkit-scrollbar {
       -webkit-appearance: none;
