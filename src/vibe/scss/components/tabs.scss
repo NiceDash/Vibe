@@ -58,7 +58,9 @@
 			}
 		}
 	}
-
+	& .nav-item {
+		margin-bottom: 0;
+	}
 }
 .tab-content {
     background: white;
