@@ -9,12 +9,12 @@ export default class Header extends Component {
     super(props);
 
     this.state = {
-      isOpen: false
+      isOpen: false,
     };
   }
   toggle = () => {
     this.setState({
-      isOpen: !this.state.isOpen
+      isOpen: !this.state.isOpen,
     });
   };
 
@@ -32,9 +32,7 @@ export default class Header extends Component {
   render() {
     return (
       <header className="app-header">
-        <a href="#page-content" tabIndex="1" className="skip-to-content">
-          Skip to main content
-        </a>
+        <SkipToContentLink focusId="primary-content" />
         <div className="top-nav">
           <Navbar color="faded" light expand="md">
             <ToggleSidebarButton
@@ -55,3 +53,11 @@ export default class Header extends Component {
     );
   }
 }
+
+const SkipToContentLink = ({ focusId }) => {
+  return (
+    <a href={`#${focusId}`} tabIndex="1" className="skip-to-content">
+      Skip to Content
+    </a>
+  );
+};

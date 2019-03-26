@@ -2,26 +2,21 @@ import React from 'react';
 import ChatElements from './ChatElements';
 import FA from 'react-fontawesome';
 
-function Container(props) {
-  return <div className="ChatBoxContainer">{props.children}</div>;
+function Container({ children }) {
+  return <div className="ChatBoxContainer">{children}</div>;
 }
 
-function CloseChatBox(props) {
+function CloseChatBox({ close }) {
   return (
-    <button className="CloseChat" onClick={props.close}>
+    <button className="CloseChat" onClick={close}>
       <FA name="times" />
       <span className="sr-only">Close Chat</span>
     </button>
   );
 }
 
-function ChatHeaderStatus(props) {
-  const color =
-    props.status === 'online'
-      ? 'text-success'
-      : props.status === 'offline'
-      ? 'text-muted'
-      : 'text-muted';
+function ChatHeaderStatus({ status }) {
+  const color = status === 'online' ? 'text-success' : status === 'offline' ? 'text-muted' : 'text-muted';
   return (
     <span className="m-r">
       <FA name="circle" className={color} />
@@ -29,18 +24,14 @@ function ChatHeaderStatus(props) {
   );
 }
 
-function ChatBoxHeader(props) {
-  const screenReaderText = props.isExpanded ? 'Hide Chat' : 'Show Chat';
+function ChatBoxHeader({ close, isExpanded, name, status, toggle }) {
+  const screenReaderText = isExpanded ? 'Hide Chat' : 'Show Chat';
   return (
-    <header
-      className="ChatHeader"
-      onClick={props.toggle}
-      onKeyPress={props.toggle}
-      tabIndex={0}>
-      {props.status && <ChatHeaderStatus status={props.status} />}
+    <header className="ChatHeader" onClick={toggle} onKeyPress={toggle} tabIndex={0}>
+      {status && <ChatHeaderStatus status={status} />}
       <span className="sr-only">{screenReaderText}</span>
-      {props.name}
-      <CloseChatBox close={props.close} />
+      {name}
+      <CloseChatBox close={close} />
     </header>
   );
 }
@@ -49,7 +40,7 @@ class ChatBox extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      expanded: false
+      expanded: false,
     };
     this.toggle = this.toggle.bind(this);
   }
@@ -74,7 +65,7 @@ class ChatBox extends React.Component {
 
 const Chat = {
   Container: Container,
-  ChatBox: ChatBox
+  ChatBox: ChatBox,
 };
 
 export default Chat;

@@ -8,20 +8,31 @@ import nav from '../_nav';
 import routes from '../views';
 import ContextProviders from '../vibe/components/utilities/ContextProviders';
 
+const MOBILE_SIZE = 992;
+
 export default class DashboardLayout extends Component {
   constructor(props) {
     super(props);
     this.state = {
       sidebarCollapsed: false,
-      showChat1: true
+      isMobile: window.innerWidth <= MOBILE_SIZE,
+      showChat1: true,
     };
   }
 
   handleResize = () => {
-    if (window.innerWidth <= 992) {
-      this.setState({ sidebarCollapsed: false });
+    if (window.innerWidth <= MOBILE_SIZE) {
+      this.setState({ sidebarCollapsed: false, isMobile: true });
+    } else {
+      this.setState({ isMobile: false });
     }
   };
+
+  componentDidUpdate(prev) {
+    if (this.state.isMobile && prev.location.pathname !== this.props.location.pathname) {
+      this.toggleSideCollapse();
+    }
+  }
 
   componentDidMount() {
     window.addEventListener('resize', this.handleResize);
@@ -32,7 +43,7 @@ export default class DashboardLayout extends Component {
   }
 
   toggleSideCollapse = () => {
-    this.setState({ sidebarCollapsed: !this.state.sidebarCollapsed });
+    this.setState(prevState => ({ sidebarCollapsed: !prevState.sidebarCollapsed }));
   };
 
   closeChat = () => {
@@ -60,7 +71,8 @@ export default class DashboardLayout extends Component {
                 toggleSidebar={this.toggleSideCollapse}
                 isSidebarCollapsed={sidebarCollapsed}
                 routes={routes}
-                {...this.props}>
+                {...this.props}
+              >
                 <HeaderNav />
               </Header>
               <PageContent>

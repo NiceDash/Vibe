@@ -5,7 +5,9 @@ const PageAlertContext = React.createContext();
 export class PageAlertProvider extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      alert: null,
+    };
   }
 
   setAlert = (message, type) => {
@@ -23,8 +25,9 @@ export class PageAlertProvider extends Component {
         value={{
           alert: this.state.alert,
           closeAlert: this.closeAlert,
-          setAlert: this.setAlert
-        }}>
+          setAlert: this.setAlert,
+        }}
+      >
         {this.props.children}
       </PageAlertContext.Provider>
     );

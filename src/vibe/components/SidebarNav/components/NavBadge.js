@@ -1,8 +1,8 @@
 import React from 'react';
 import { Badge } from 'reactstrap';
 
-const NavBadge = props => {
-  return <Badge color={props.color}>{props.text}</Badge>;
+const NavBadge = ({ color, text }) => {
+  return <Badge color={color}>{text}</Badge>;
 };
 
 export default NavBadge;

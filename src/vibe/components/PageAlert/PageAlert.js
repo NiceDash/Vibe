@@ -11,8 +11,9 @@ export default function PageAlert() {
             color={context.alert.type}
             className="page-level-alert"
             fade={false}
-            isOpen={context.alert}
-            toggle={context.closeAlert}>
+            isOpen={context.alert !== null}
+            toggle={context.closeAlert}
+          >
             {context.alert.message}
           </Alert>
         )

@@ -5,14 +5,14 @@ const PageLoader = () => {
   return <PageLoaderContext.Consumer>{context => <Loader percent={context.percent} />}</PageLoaderContext.Consumer>;
 };
 
-const Loader = props => {
-  const loading = props.percent && props.percent > 0;
+const Loader = ({ percent }) => {
+  const loading = percent && percent > 0;
   const loaderStyle = {
-    width: `${props.percent}%`
+    width: `${percent}%`,
   };
 
   const wrapStyle = {
-    opacity: loading && props.percent < 100 ? '1' : '0'
+    opacity: loading && percent < 100 ? '1' : '0',
   };
 
   return (
