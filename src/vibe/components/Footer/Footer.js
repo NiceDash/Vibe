@@ -1,9 +1,5 @@
 import React from 'react';
 
-export default function Footer (props) {
-    return (
-        <footer className="app-footer">
-            {props.children}
-        </footer>
-    )
+export default function Footer({ children }) {
+  return <footer className="app-footer">{children}</footer>;
 }

@@ -1,18 +1,18 @@
 import React from 'react';
 import PageAlertContext from '../PageAlert/PageAlertContext';
 
-const Page = props => {
+const Page = ({ children }) => {
   return (
-    <PageAlertContext>
+    <PageAlertContext.Consumer>
       {context => {
         const hasPageAlertClass = context.alert ? 'has-alert' : '';
         return (
           <div id="page-content" className={`${hasPageAlertClass}`}>
-            {props.children}
+            {children}
           </div>
         );
       }}
-    </PageAlertContext>
+    </PageAlertContext.Consumer>
   );
 };
 

@@ -26,7 +26,7 @@ export default function Feed() {
         <Col md={{ size: 8, offset: 2 }}>
           <Card>
             <CardBody>
-              <textarea name="status" id="status" class="form-control" placeholder="Write your message..." />
+              <textarea name="status" id="status" className="form-control" placeholder="Write your message..." />
             </CardBody>
             <CardFooter>
               <Button color="secondary">
@@ -39,25 +39,25 @@ export default function Feed() {
           </Card>
           <Card>
             <CardHeader>
-              <div class="m-r-sm inline-block">
-                <div class="avatar avatar-base bg-blue">
-                  <div class="user-initials">GC</div>
+              <div className="m-r-sm inline-block">
+                <div className="avatar avatar-base bg-blue">
+                  <div className="user-initials">GC</div>
                 </div>
               </div>
-              <h5 class="inline m-b-none m-t-none">George Costanza</h5>
+              <h5 className="inline m-b-none m-t-none">George Costanza</h5>
             </CardHeader>
             <CardBody>
               <div>
                 <iframe
                   src="https://player.vimeo.com/video/315269363?color=f15f5f&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0"
-                  class="w-full"
+                  className="w-full"
                   title="video"
                   width="640"
                   height="360"
-                  frameborder="0"
+                  frameBorder="0"
                   webkitallowfullscreen=""
                   mozallowfullscreen=""
-                  allowfullscreen=""
+                  allowFullScreen=""
                 />
               </div>
               <div>
@@ -68,18 +68,18 @@ export default function Feed() {
               <PostActions />
             </CardBody>
             <CardFooter>
-              <div class="display-flex">
+              <div className="display-flex">
                 <Avatar initials="JS" color="orange" />
-                <input type="text" class="form-control m-l" />
+                <input type="text" className="form-control m-l" />
               </div>
             </CardFooter>
           </Card>
           <Card>
             <CardHeader>
-              <div class="m-r-sm inline-block">
+              <div className="m-r-sm inline-block">
                 <Avatar initials="EB" color="blue" />
               </div>
-              <h5 class="inline m-b-none m-t-none">Elaine Benis</h5>
+              <h5 className="inline m-b-none m-t-none">Elaine Benis</h5>
             </CardHeader>
             <CardBody>
               <div>
@@ -88,18 +88,18 @@ export default function Feed() {
               <PostActions />
             </CardBody>
             <CardFooter>
-              <div class="display-flex">
+              <div className="display-flex">
                 <Avatar initials="JS" color="orange" />
-                <input type="text" class="form-control m-l" />
+                <input type="text" className="form-control m-l" />
               </div>
             </CardFooter>
           </Card>
           <Card>
             <CardHeader>
-              <div class="m-r-sm inline-block">
+              <div className="m-r-sm inline-block">
                 <Avatar initials="CK" color="blue" />
               </div>
-              <h5 class="inline m-b-none m-t-none">Cosmo Kramer</h5>
+              <h5 className="inline m-b-none m-t-none">Cosmo Kramer</h5>
             </CardHeader>
             <CardBody>
               <div>
@@ -108,20 +108,20 @@ export default function Feed() {
               <PostActions />
             </CardBody>
             <CardFooter>
-              <div class="display-flex">
+              <div className="display-flex">
                 <Avatar initials="JS" color="orange" />
-                <input type="text" class="form-control m-l" />
+                <input type="text" className="form-control m-l" />
               </div>
             </CardFooter>
           </Card>
           <Card>
             <CardHeader>
-              <div class="m-r-sm inline-block">
-                <div class="avatar avatar-base bg-orange">
-                  <div class="user-initials">JS</div>
+              <div className="m-r-sm inline-block">
+                <div className="avatar avatar-base bg-orange">
+                  <div className="user-initials">JS</div>
                 </div>
               </div>
-              <h5 class="inline m-b-none m-t-none">Jerry Seinfeld</h5>
+              <h5 className="inline m-b-none m-t-none">Jerry Seinfeld</h5>
             </CardHeader>
             <CardBody>
               <div>
@@ -132,9 +132,9 @@ export default function Feed() {
               <PostActions />
             </CardBody>
             <CardFooter>
-              <div class="display-flex">
+              <div className="display-flex">
                 <Avatar initials="JS" color="orange" />
-                <input type="text" class="form-control m-l" />
+                <input type="text" className="form-control m-l" />
               </div>
             </CardFooter>
           </Card>

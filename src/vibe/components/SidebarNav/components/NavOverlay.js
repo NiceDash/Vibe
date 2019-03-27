@@ -1,7 +1,7 @@
 import React from 'react';
 
-const NavOverlay = props => {
-  return <div className="sidebar-overlay" onClick={props.onClick} />;
+const NavOverlay = ({ onClick }) => {
+  return <div className="sidebar-overlay" onClick={onClick} />;
 };
 
 export default NavOverlay;

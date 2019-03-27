@@ -326,5 +326,9 @@
         overflow-y: auto;
       }
     }
+
+    // Stop app from scrolling when scrolling through app-sidebar
+    overflow: hidden;
+    height: 100vh;
   }
 }

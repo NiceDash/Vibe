@@ -3,8 +3,7 @@ import { NavLink } from 'react-router-dom';
 import * as Feather from 'react-feather';
 import NavBadge from './NavBadge';
 
-const NavSingleItem = props => {
-  const { item } = props;
+const NavSingleItem = ({ item }) => {
   const Icon = item.icon && Feather[item.icon] ? Feather[item.icon] : null;
   if (item.external) {
     return (
@@ -12,9 +11,7 @@ const NavSingleItem = props => {
         <a href={item.url}>
           {item.icon && Icon && <Icon className="side-nav-icon" />}
           <span className="nav-item-label">{item.name}</span>
-          {item.badge && (
-            <NavBadge color={item.badge.variant} text={item.badge.text} />
-          )}
+          {item.badge && <NavBadge color={item.badge.variant} text={item.badge.text} />}
         </a>
       </li>
     );
@@ -24,9 +21,7 @@ const NavSingleItem = props => {
         <NavLink to={item.url} activeClassName="active">
           {item.icon && Icon && <Icon className="side-nav-icon" />}
           <span className="nav-item-label">{item.name}</span>
-          {item.badge && (
-            <NavBadge color={item.badge.variant} text={item.badge.text} />
-          )}
+          {item.badge && <NavBadge color={item.badge.variant} text={item.badge.text} />}
         </NavLink>
       </li>
     );

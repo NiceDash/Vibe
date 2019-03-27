@@ -20,13 +20,7 @@ export default class SidebarNav extends Component {
 
     const itemType = (item, index) => {
       if (item.children) {
-        return (
-          <NavDropdownItem
-            key={index}
-            item={item}
-            isSidebarCollapsed={this.props.isSidebarCollapsed}
-          />
-        );
+        return <NavDropdownItem key={index} item={item} isSidebarCollapsed={this.props.isSidebarCollapsed} />;
       } else if (item.divider) {
         return <NavDivider key={index} />;
       } else {
@@ -34,14 +28,12 @@ export default class SidebarNav extends Component {
       }
     };
 
-    const NavBrand = props => {
+    const NavBrand = ({ logo, logoText }) => {
       return (
         <div className="site-logo-bar">
           <NavLink to="/" className="navbar-brand">
-            {props.logo && <img src={props.logo} alt="" />}
-            {props.logoText && (
-              <span className="logo-text">{props.logoText}</span>
-            )}
+            {logo && <img src={logo} alt="" />}
+            {logoText && <span className="logo-text">{logoText}</span>}
           </NavLink>
         </div>
       );
@@ -54,10 +46,7 @@ export default class SidebarNav extends Component {
           return (
             <div>
               <div className={`app-sidebar ${hasPageAlertClass}`}>
-                <NavBrand
-                  logo={this.props.logo}
-                  logoText={this.props.logoText}
-                />
+                <NavBrand logo={this.props.logo} logoText={this.props.logoText} />
                 <nav>
                   <ul id="main-menu">
                     {navItems(this.props.nav.top)}
@@ -66,9 +55,7 @@ export default class SidebarNav extends Component {
                   </ul>
                 </nav>
               </div>
-              {this.props.isSidebarCollapsed && (
-                <NavOverlay onClick={this.props.toggleSidebar} />
-              )}
+              {this.props.isSidebarCollapsed && <NavOverlay onClick={this.props.toggleSidebar} />}
             </div>
           );
         }}
