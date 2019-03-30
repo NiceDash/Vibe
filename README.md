@@ -13,8 +13,8 @@ which allows you to quickly change global colors and styles.
 
 ### Updating styles
 
-Sass files can be found in `./src/vibe/assets/scss`.
-Update `vars.scss` to change global styles.
+Sass files can be found in `./src/vibe/scss`.
+Update `./src/vibe/scss/components/vars.scss` to change global styles.
 
 ### Reporting Issues
 
