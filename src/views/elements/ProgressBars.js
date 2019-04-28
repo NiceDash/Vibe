@@ -15,13 +15,13 @@ export default class ProgressPage extends React.Component {
 
     down () {
         if (this.state.progress > 0) {
-            this.setState({ progress: this.state.progress - 10 })
+            this.setState(prevState => ({ progress: prevState.progress - 10 }));
         }
     }
 
     up () {
         if (this.state.progress < 100) {
-            this.setState({ progress: this.state.progress + 10 })
+            this.setState(prevState => ({ progress: prevState.progress + 10 }));
         }
     }
 
