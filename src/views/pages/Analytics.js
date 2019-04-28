@@ -223,7 +223,7 @@ export default class AnalyticsPage extends Component {
                 <Switch
                   enabled={this.state.facebook}
                   toggle={() => {
-                    this.setState({ facebook: !this.state.facebook });
+                    this.setState(prevState => ({ facebook: !prevState.facebook }));
                   }}
                 />
                 <span className="text-facebook pull-right">
@@ -233,7 +233,7 @@ export default class AnalyticsPage extends Component {
                 <Switch
                   enabled={this.state.twitter}
                   toggle={() => {
-                    this.setState({ twitter: !this.state.twitter });
+                    this.setState(prevState => ({ twitter: !prevState.twitter }));
                   }}
                 />
                 <span className="text-twitter pull-right">
