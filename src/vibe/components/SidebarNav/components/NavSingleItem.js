@@ -8,7 +8,7 @@ const NavSingleItem = ({ item }) => {
   if (item.external) {
     return (
       <li className="nav-item">
-        <a href={item.url}>
+        <a href={item.url} target={item.target}>
           {item.icon && Icon && <Icon className="side-nav-icon" />}
           <span className="nav-item-label">{item.name}</span>
           {item.badge && <NavBadge color={item.badge.variant} text={item.badge.text} />}
