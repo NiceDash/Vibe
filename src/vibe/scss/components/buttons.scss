@@ -76,7 +76,6 @@
 
 		&:focus,
 	    &:hover {
-	    	background-color: $btnColorPrimary;
 	    	@include buttonBorder($btnColorPrimary);
 	    }
 	}
@@ -94,7 +93,6 @@
 
 		&:focus,
 	    &:hover {
-	    	background-color: $btnColorSuccess;
 	    	@include buttonBorder($btnColorSuccess);
 	    }
 	}
@@ -103,8 +101,7 @@
 
 		&:focus,
 	    &:hover {
-	    	background-color: $btnColorInfo;
-			@include buttonBorder($btnColorInfo);
+		@include buttonBorder($btnColorInfo);
 		}
 	}
 	&.btn-outline-warning {
@@ -112,8 +109,7 @@
 
 		&:focus,
 	    &:hover {
-	    	background-color: $btnColorWarning;
-			@include buttonBorder($btnColorWarning);
+		@include buttonBorder($btnColorWarning);
 		}
 	}
 	&.btn-outline-danger {
@@ -121,8 +117,7 @@
 
 		&:focus,
 	    &:hover {
-	    	background-color: $btnColorDanger;
-			@include buttonBorder($btnColorDanger);
+		@include buttonBorder($btnColorDanger);
 		}
 	}
 }
