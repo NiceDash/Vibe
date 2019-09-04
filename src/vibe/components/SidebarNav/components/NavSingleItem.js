@@ -6,9 +6,11 @@ import NavBadge from './NavBadge';
 const NavSingleItem = ({ item }) => {
   const Icon = item.icon && Feather[item.icon] ? Feather[item.icon] : null;
   if (item.external) {
+    const rel = item.target && item.target === '_blank' ? 'noopener noreferrer' : null;
+    
     return (
       <li className="nav-item">
-        <a href={item.url}>
+        <a href={item.url} target={item.target} rel={rel}>
           {item.icon && Icon && <Icon className="side-nav-icon" />}
           <span className="nav-item-label">{item.name}</span>
           {item.badge && <NavBadge color={item.badge.variant} text={item.badge.text} />}

@@ -125,6 +125,7 @@ export default {
       url: 'https://github.com/NiceDash/Vibe',
       icon: 'GitHub',
       external: true,
+      target: '_blank',
     },
     {
       name: 'Account',
