@@ -3,6 +3,7 @@ import ToggleSidebarButton from './components/ToggleSidebarButton';
 import PageLoader from '../PageLoader/PageLoader';
 
 import { Navbar, NavbarToggler, Collapse, Nav } from 'reactstrap';
+import { matchPath } from 'react-router-dom';
 
 export default class Header extends Component {
   constructor(props) {
@@ -21,7 +22,13 @@ export default class Header extends Component {
   getPageTitle = () => {
     let name;
     this.props.routes.map(prop => {
-      if (prop.path === this.props.location.pathname) {
+      if (
+        matchPath(this.props.location.pathname, {
+          path: prop.path,
+          exact: true,
+          strict: false
+        })
+      ) {
         name = prop.name;
       }
       return null;
