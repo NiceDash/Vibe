@@ -61,7 +61,9 @@ Key | Value
 --- | ---
 `name` | Display name of the menu entry
 `icon` | (Optional) Icon prefixed to the display name. The correct item gets autoloaded by Vibe.
-`url` | Relative route to the page (For linked menu entries). Make sure your `url` starts with a slash. (I.e. `/home`)
+`url` | (Optional) Either a relative URL to the target page or an absolute URL to an external page (For linked menu entries. Make sure relative URLs start with a slash, i.e. `/home`)
+`external` | (Optional) Set to `true` if the `url` points to an external page.
+`target` | (Optional) Set to `_blank` if you want the link to an external page to open in a new window.
 `children` | Child entries as array (For folder menu entries)
 
 *Note:* If you wish menus to be expanded by default, you have to change the initial state of `open` in `./src/vibe/components/SidebarNav/components/NavDropdownItem.js`.
