@@ -7,7 +7,7 @@ const NavSingleItem = ({ item }) => {
   const Icon = item.icon && Feather[item.icon] ? Feather[item.icon] : null;
   if (item.external) {
     const rel = item.target && item.target === '_blank' ? 'noopener noreferrer' : null;
-    
+
     return (
       <li className="nav-item">
         <a href={item.url} target={item.target} rel={rel}>
@@ -18,9 +18,16 @@ const NavSingleItem = ({ item }) => {
       </li>
     );
   } else {
+    let url = item.url;
+
+    // Force relative URLs to start with a slash
+    if (url.substring(0, 1) !== '/') {
+      url = '/' + url;
+    }
+
     return (
       <li className="nav-item">
-        <NavLink to={item.url} activeClassName="active">
+        <NavLink to={url} activeClassName="active">
           {item.icon && Icon && <Icon className="side-nav-icon" />}
           <span className="nav-item-label">{item.name}</span>
           {item.badge && <NavBadge color={item.badge.variant} text={item.badge.text} />}
