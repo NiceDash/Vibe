@@ -64,7 +64,8 @@ Key | Value
 `url` | (Optional) Either a relative URL to the target page or an absolute URL to an external page (For linked menu entries. Make sure relative URLs start with a slash, i.e. `/home`)
 `external` | (Optional) Set to `true` if the `url` points to an external page.
 `target` | (Optional) Set to `_blank` if you want the link to an external page to open in a new window.
-`children` | Child entries as array (For folder menu entries)
+`children` | (Optional) Child entries as array (For folder menu entries)
+`divider` | (Optional) Inserts a visual divider if set to true (Use this instead of a menu entry)
 
 *Note:* If you wish menus to be expanded by default, you have to change the initial state of `open` in `./src/vibe/components/SidebarNav/components/NavDropdownItem.js`.
 
