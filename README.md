@@ -1,9 +1,9 @@
 <p align="center">
-    <img src="assets/preview.png" width="400" />
+    <img src="assets/preview.png"/>
 </p>
 
 Vibe is a beautiful React.js dashboard build with Bootstrap 4 and
-comes with lots of custom templates and components. It uses Sass
+comes with lots of custom templates and components. It's built with Sass
 which allows you to quickly change global colors and styles.
 
 ### Quick Start
@@ -60,7 +60,7 @@ Every top level menu entry can either be a top level button or a folder with a s
 Key | Value
 --- | ---
 `name` | Display name of the menu entry
-`icon` | (Optional) Icon prefixed to the display name. The correct item gets autoloaded by Vibe.
+`icon` | (Optional) Icon prefixed to the display name. The correct item gets autoloaded by Vibe. ([react-feather](https://www.npmjs.com/package/react-feather) is used for icons.
 `url` | (Optional) Either a relative URL to the target page or an absolute URL to an external page (For linked menu entries. Make sure relative URLs start with a slash, i.e. `/home`)
 `external` | (Optional) Set to `true` if the `url` points to an external page.
 `target` | (Optional) Set to `_blank` if you want the link to an external page to open in a new window.
