@@ -7,6 +7,7 @@ import avatar1 from '../assets/images/avatar1.png';
 import nav from '../_nav';
 import routes from '../views';
 import ContextProviders from '../vibe/components/utilities/ContextProviders';
+import handleKeyAccessibility, { handleClickAccessibility } from '../vibe/helpers/handleTabAccessibility';
 
 const MOBILE_SIZE = 992;
 
@@ -36,6 +37,8 @@ export default class DashboardLayout extends Component {
 
   componentDidMount() {
     window.addEventListener('resize', this.handleResize);
+    document.addEventListener('keydown', handleKeyAccessibility);
+    document.addEventListener('click', handleClickAccessibility);
   }
 
   componentWillUnmount() {
