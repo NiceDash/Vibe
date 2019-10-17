@@ -47,6 +47,8 @@ Key | Value
 `name` | The display name in the top bar (`Header`) of the dashboard
 `route` | Route of this page, using the [react-router-dom](https://reacttraining.com/react-router/web/guides/quick-start) syntax
 
+*Note:* The order of the page definition is important for the routing. The first page to match a route wins. Example: If you want to route `/edit` and `/edit/:id` to different components, you need to define the page with route `/edit/:id` first. Otherwise `/edit` always wins out.
+
 See below for how to use Bootstrap components to design your page content.
 
 ### Creating a menu entry
@@ -75,7 +77,7 @@ Vibe is using the Bootstrap-for-React library [reactstrap](https://reactstrap.gi
 
 Note that Vibe overwrites the default Bootstrap styles in `./src/vibe/scss/components/`.
 
-Custom Vibe components are in the `.src/vibe/components/` directory.
+Custom Vibe components are in the `./src/vibe/components/` directory.
 
 ### Using Feather icons
 
