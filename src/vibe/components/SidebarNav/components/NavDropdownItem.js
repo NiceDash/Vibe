@@ -11,9 +11,9 @@ export default class NavDropdownItem extends Component {
     };
   }
   toggle = e => {
+    this.setState(prevState => ({ open: !prevState.open }));
     e.preventDefault();
     e.stopPropagation();
-    this.setState(prevState => ({ open: !prevState.open }));
   };
   render() {
     const { item } = this.props;

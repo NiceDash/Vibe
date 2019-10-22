@@ -35,7 +35,7 @@
     font-weight: bold;
     margin-right: 0;
 
-    &:focus {
+    .keyboardActive &:focus {
       outline: none;
       box-shadow: inset 0px 0px 0px 2px $activeNavBorderColor !important;
     }
@@ -102,7 +102,7 @@
         .nav-item {
           background: darken($sidenavBgHover, 4%);
 
-          &:focus,
+          .keyboardActive &:focus,
           &:hover {
             a {
               background: darken($sidenavBgHover, 6%);
@@ -116,7 +116,7 @@
               background: darken($sidenavBgHover, 6%);
             }
 
-            &:focus {
+            .keyboardActive &:focus {
               outline: none;
               box-shadow: inset 0px 0px 0px 2px $activeNavBorderColor;
             }
@@ -153,6 +153,9 @@
 
       &:focus {
         outline: none;
+      }
+
+      .keyboardActive &:focus {
         box-shadow: inset 0px 0px 0px 2px $activeNavBorderColor !important;
       }
 
@@ -282,7 +285,7 @@
             }
           }
 
-          &:focus,
+          .keyboardActive &:focus,
           &:hover {
             .nav-submenu {
               position: absolute;
