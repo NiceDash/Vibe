@@ -12,6 +12,8 @@ export default function Avatars() {
       <Card>
         <CardHeader>Initials</CardHeader>
         <CardBody>
+          <Avatar initials="JS" color="primary" size="big" /> <Avatar initials="TD" color="secondary" size="big" />{' '}
+          <Avatar initials="AP" color="warning" size="medium" /> <Avatar initials="PT" color="danger" size="medium" />{' '}
           <Avatar initials="JS" color="primary" /> <Avatar initials="TD" color="secondary" />{' '}
           <Avatar initials="AP" color="warning" size="small" /> <Avatar initials="PT" color="danger" size="small" />{' '}
         </CardBody>
@@ -19,8 +21,9 @@ export default function Avatars() {
       <Card>
         <CardHeader>Images</CardHeader>
         <CardBody>
-          <Avatar image={avatar3} /> <Avatar image={avatar4} /> <Avatar image={avatar5} size="small" />{' '}
-          <Avatar image={avatar6} size="small" />{' '}
+          <Avatar image={avatar3} size="big" /> <Avatar image={avatar4} size="big" />{' '}
+          <Avatar image={avatar5} size="medium" /> <Avatar image={avatar6} size="medium" /> <Avatar image={avatar3} />{' '}
+          <Avatar image={avatar4} /> <Avatar image={avatar5} size="small" /> <Avatar image={avatar6} size="small" />{' '}
         </CardBody>
       </Card>
     </React.Fragment>
