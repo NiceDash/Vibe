@@ -46,8 +46,7 @@ Key | Value
 `component` | Your component name
 `name` | The display name in the top bar (`Header`) of the dashboard
 `route` | Route of this page, using the [react-router-dom](https://reacttraining.com/react-router/web/guides/quick-start) syntax
-
-*Note:* The order of the page definition is important for the routing. The first page to match a route wins. Example: If you want to route `/edit` and `/edit/:id` to different components, you need to define the page with route `/edit/:id` first. Otherwise `/edit` always wins out.
+`exact` | (Optional) Set to true if you want to match this route exactly. See [Routes documentation](https://reacttraining.com/react-router/web/api/Route/exact-bool) for details.
 
 See below for how to use Bootstrap components to design your page content.
 
