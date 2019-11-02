@@ -22,122 +22,123 @@ import ProgressBars from './elements/ProgressBars';
 import PaginationPage from './elements/Pagination';
 import ErrorPage from './pages/404';
 
+// See React Router documentation for details: https://reacttraining.com/react-router/web/api/Route
 const pageList = [
   {
     name: 'Dashboard',
     path: '/home',
-    component: Dashboard
+    component: Dashboard,
   },
   {
     name: 'Buttons',
     path: '/elements/buttons',
-    component: Buttons
+    component: Buttons,
   },
   {
     name: 'Alerts',
     path: '/elements/alerts',
-    component: Alerts
+    component: Alerts,
   },
   {
     name: 'Grid',
     path: '/elements/grid',
-    component: Grid
+    component: Grid,
   },
   {
     name: 'Typography',
     path: '/elements/typography',
-    component: Typography
+    component: Typography,
   },
   {
     name: 'Cards',
     path: '/elements/cards',
-    component: Cards
+    component: Cards,
   },
   {
     name: 'Tabs',
     path: '/elements/tabs',
-    component: Tabs
+    component: Tabs,
   },
   {
     name: 'Tables',
     path: '/elements/tables',
-    component: Tables
+    component: Tables,
   },
   {
     name: 'Progress Bars',
     path: '/elements/progressbars',
-    component: ProgressBars
+    component: ProgressBars,
   },
   {
     name: 'Pagination',
     path: '/elements/pagination',
-    component: PaginationPage
+    component: PaginationPage,
   },
   {
     name: 'Modals',
     path: '/elements/modals',
-    component: Modals
+    component: Modals,
   },
   {
     name: 'Breadcrumbs',
     path: '/elements/breadcrumbs',
-    component: Breadcrumbs
+    component: Breadcrumbs,
   },
   {
     name: 'Forms',
     path: '/elements/forms',
-    component: Forms
+    component: Forms,
   },
   {
     name: 'Loaders',
     path: '/elements/loaders',
-    component: Loaders
+    component: Loaders,
   },
   {
     name: 'Avatars',
     path: '/elements/avatars',
-    component: Avatars
+    component: Avatars,
   },
   {
     name: 'Blank',
     path: '/pages/blank',
-    component: BlankPage
+    component: BlankPage,
   },
   {
     name: 'Sub Navigation',
     path: '/pages/subnav',
-    component: SubNav
+    component: SubNav,
   },
   {
     name: '404',
     path: '/pages/404',
-    component: ErrorPage
+    component: ErrorPage,
   },
   {
     name: 'Analytics',
     path: '/apps/analytics',
-    component: Analytics
+    component: Analytics,
   },
   {
     name: 'Activity Feed',
     path: '/apps/feed',
-    component: Feed
+    component: Feed,
   },
   {
     name: 'Invoice',
     path: '/apps/invoice',
-    component: Invoice
+    component: Invoice,
   },
   {
     name: 'CMS',
     path: '/apps/cms',
-    component: CmsPage
+    component: CmsPage,
   },
   {
     name: 'Widgets',
     path: '/widgets',
-    component: Widgets
-  }
+    component: Widgets,
+  },
 ];
 
 export default pageList;
