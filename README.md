@@ -2,7 +2,7 @@
     <img src="assets/preview.png"/>
 </p>
 
-Vibe is a beautiful React.js dashboard build with Bootstrap 4 and
+Vibe is a beautiful React.js dashboard built with Bootstrap 4 and
 comes with lots of custom templates and components. It's built with Sass
 which allows you to quickly change global colors and styles.
 
